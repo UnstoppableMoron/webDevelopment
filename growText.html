@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlarging Text Using Animation</title>
+    <style>
+        #growText {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="growText">Text</p>
+
+    <script>
+        var text = document.getElementById('growText');
+
+        var fontSize = 10
+
+        var timer = setInterval(growText, 500);
+
+        function growText() {
+            text.style.fontSize = fontSize + "px";
+            fontSize += 1;
+
+            if(fontSize == 20) {
+                clearInterval(growText);
+            }
+        }
+    //I haven't the slightest idea why the text doesn't stop growing.
+    </script>
+</body>
+</html>
