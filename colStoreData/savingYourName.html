@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving Your Name</title>
+    
+</head>
+<body>
+    <p id="welcome"></p>
+    <p>Refresh the page to see localStorage in action!</p>
+
+    <script>
+        // Check to see if the key user exists
+        if(localStorage.getItem("user")) {
+            // If true, welcome the user back to the website
+            $("#welcome").text("Welcome back, " + localStorage.user);
+        } else {
+
+
+            var name = prompt("What is your name?");
+            localStorage.setItem("user", name);
+            
+        }
+    </script>
+</body>
+</html>
